@@ -1,6 +1,9 @@
+__dirname = ... and (...)\match '(.-%.?)[^%.]+$' or ''
+req = (file) -> require(__dirname .. file)
+
 Vector = require('lib/geo/vector')
 moon = require('moon')
-Enum = require('lib/utils/enum')
+Enum = req('lib/utils/enum')
 
 class Direction extends Vector
 

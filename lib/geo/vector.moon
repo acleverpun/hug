@@ -1,6 +1,9 @@
+__dirname = ... and (...)\match '(.-%.?)[^%.]+$' or ''
+req = (file) -> require(__dirname .. file)
+
 Caste = require('vendor/caste/lib/caste')
 moon = require('moon')
-Enum = require('lib/utils/enum')
+Enum = req('lib/utils/enum')
 
 class Vector extends Caste
 
