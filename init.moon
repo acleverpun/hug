@@ -1,20 +1,17 @@
 -- __dirname = (...)\match('(.-)[^%/%.]+$')
-__dirname = ... and (...)\match '(.-%.?)[^%.]+$' or ''
-
--- return (...) ->
--- __dirname = (...)\match('(.-)[^%/%.]+$')
--- 	(file) -> require(__dirname .. file)
-req = (file) -> require(__dirname .. file)
+-- __dirname = ... and (...)\match('(.-%.?)[^%.]+$') or ''
+__dirname = ...
+export req = (file) -> require(__dirname .. '.' .. file)
 
 utils = {
-	display: req('display'),
-	enum: req('enum'),
-	geo: req('geo'),
-	loader: req('loader'),
-	math: req('math'),
-	queue: req('queue'),
-	run: req('run'),
-	structs: req('structs'),
+	_: req('lib.lodash'),
+	display: req('lib.display'),
+	Enum: req('lib.enum'),
+	geo: req('lib.geo'),
+	Loader: req('lib.loader'),
+	math: req('lib.math'),
+	Queue: req('lib.queue'),
+	run: req('lib.run'),
 }
 
 return utils

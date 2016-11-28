@@ -1,7 +1,8 @@
 return {
-  whitelist_globals = {
-    ['.'] = {
-      '_',
-    }
-  }
+	whitelist_globals = {
+		['.'] = {
+			'_',
+			'req'
+		}
+	}
 }

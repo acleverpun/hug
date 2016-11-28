@@ -1,3 +1,5 @@
+_ = req('lib.lodash')
+
 class Loader
 
 	new: (handler) =>

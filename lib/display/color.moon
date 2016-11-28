@@ -1,3 +1,5 @@
+_ = req('lib.lodash')
+
 class Color
 
 	new: (r, g = 0, b = 0, a = 255) =>

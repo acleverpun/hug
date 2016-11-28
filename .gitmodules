@@ -1,3 +1,6 @@
 [submodule "vendor/caste"]
 	path = vendor/caste
 	url = https://github.com/acleverpun/caste.git
+[submodule "vendor/lodash"]
+	path = vendor/lodash
+	url = https://github.com/axmat/lodash.lua.git
