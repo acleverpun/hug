@@ -3,7 +3,7 @@
 __dirname = ...
 export req = (file) -> require(__dirname .. '.' .. file)
 
-utils = {
+{
 	_: req('lib.lodash'),
 	display: req('lib.display'),
 	Enum: req('lib.enum'),
@@ -13,5 +13,3 @@ utils = {
 	Queue: req('lib.queue'),
 	run: req('lib.run'),
 }
-
-return utils

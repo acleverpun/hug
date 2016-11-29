@@ -4,11 +4,11 @@ _ = req('lib.lodash')
 -- TODO: freeze
 class Enum extends Caste
 
-	keys: {}
-	values: {}
-
 	new: (values) =>
 		if not _.isTable(values) then error 'Expected table.'
+
+		@keys = {}
+		@values = {}
 
 		for key, value in pairs(values)
 			@[key] = value
