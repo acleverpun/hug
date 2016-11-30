@@ -1,3 +1,3 @@
 {
-	Color: req('lib.display.color'),
+	Color: req(..., 'lib.display.color'),
 }

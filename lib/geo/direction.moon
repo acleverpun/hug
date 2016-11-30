@@ -1,7 +1,7 @@
-Vector = req('lib.geo.vector')
+Vector = req(..., 'lib.geo.vector')
 moon = require('moon')
-Enum = req('lib.enum')
-_ = req('lib.lodash')
+Enum = req(..., 'lib.enum')
+_ = req(..., 'lib.lodash')
 
 class Direction extends Vector
 

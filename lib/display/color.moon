@@ -1,4 +1,4 @@
-_ = req('lib.lodash')
+_ = req(..., 'lib.lodash')
 
 class Color
 

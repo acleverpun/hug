@@ -1,7 +1,7 @@
 Caste = require('vendor.caste.lib.caste')
 moon = require('moon')
-Enum = req('lib.enum')
-_ = req('lib.lodash')
+Enum = req(..., 'lib.enum')
+_ = req(..., 'lib.lodash')
 
 class Vector extends Caste
 

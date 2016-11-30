@@ -1,4 +1,4 @@
 {
-	Direction: req('lib.geo.direction'),
-	Vector: req('lib.geo.vector'),
+	Direction: req(..., 'lib.geo.direction'),
+	Vector: req(..., 'lib.geo.vector'),
 }

@@ -1,5 +1,5 @@
 Caste = require('vendor.caste.lib.caste')
-_ = req('lib.lodash')
+_ = req(..., 'lib.lodash')
 
 class Queue extends Caste
 
