@@ -11,22 +11,14 @@ split = (value, delimiter) ->
 	table.insert(result, string.sub(value, fromIndex))
 	return result
 
-__dirname = ...
-dirParts = split(dots(__dirname), '%.')
-
 export req = (path, file) ->
 	pathParts = split(dots(path), '%.')
-	fileParts = split(dots(file), '%.')
-
-	dir = __dirname
-	if path != dir
-		parts = {}
-		for p, part in pairs(pathParts)
-			if not dirParts[p] and part == fileParts[p - #dirParts] then break
-			table.insert(parts, part)
-		dir = table.concat(parts, '.')
-
-	require(dir .. '.' .. file)
+	firstFilePart = split(dots(file), '%.')[1]
+	dir = ''
+	for part in *pathParts
+		if part == firstFilePart then break
+		dir ..= "#{part}."
+	require(dir .. file)
 
 {
 	_: req(..., 'lib.lodash'),
