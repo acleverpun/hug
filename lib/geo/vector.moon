@@ -5,16 +5,18 @@ _ = req(..., 'lib.lodash')
 
 class Vector extends Caste
 
-	new: (x, y) =>
+	new: (x, y, z) =>
 		if _.isTable(x)
-			if x.x or x.y
-				-- @param {Table{/(x|y)/ => Number}}
+			if x.x or x.y or x.z
+				-- @param {Table{/(x|y|z)/ => Number}}
 				@x = x.x
 				@y = x.y
-			elseif x[1] or x[2]
+				@z = x.y
+			elseif x[1] or x[2] or x[3]
 				-- @param {Array{Number}}
 				@x = x[1]
 				@y = x[2]
+				@z = x[3]
 			-- @param {Vector}
 			-- @param {Number}
 			if _.isNumber(y)
@@ -24,6 +26,8 @@ class Vector extends Caste
 			-- @param {Number}
 			@x = x
 			@y = y
+			@z = z
+		if not @z then @z = 0
 
 	__tostring: () => "#{@@name}(#{@x}, #{@y})##{#@}"
 	toTuple: () => @x, @y
