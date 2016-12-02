@@ -1,22 +1,21 @@
-{ :Caste, :virtual } = require('vendor.caste')
+{ :Caste, :abstract } = require('vendor.caste')
 
-class Matrix extends Caste
+abstract class Matrix extends Caste
 
-	new: virtual () =>
-
-	reset: virtual () =>
-	set: virtual () =>
-	clone: virtual () =>
-	translate: virtual () =>
-	rotate: virtual () =>
-	rotateX: virtual () =>
-	rotateY: virtual () =>
-	rotateZ: virtual () =>
-	scale: virtual () =>
-	shearX: virtual () =>
-	shearY: virtual () =>
-	apply: virtual () =>
-	multiply: virtual () =>
-	transpose: virtual () =>
-	invert: virtual () =>
-	determinant: virtual () =>
+	reset: () =>
+	set: () =>
+	clone: () =>
+	translate: () =>
+	rotate: () =>
+	rotateX: () =>
+	rotateY: () =>
+	rotateZ: () =>
+	scale: () =>
+	shearX: () =>
+	shearY: () =>
+	apply: () =>
+	multiply: () =>
+	transpose: () =>
+	invert: () =>
+	determinant: () =>
+	identity: () =>

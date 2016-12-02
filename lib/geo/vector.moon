@@ -48,7 +48,8 @@ class Vector extends Caste
 		return @dot(value)
 	__div: (value) =>
 		if _.isNumber(value) then return Vector(@x / value, @y / value)
-		-- TODO: cross product (need angle methods)
+	__pow: (value) =>
+		-- TODO: cross product
 
 	add: (value) =>
 		if _.isNumber(value)
